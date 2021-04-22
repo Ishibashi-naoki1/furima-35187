@@ -62,15 +62,17 @@ Things you may want to cover:
 | carriage    | integer    | null: false                    |
 | user        | references | null: false, foreign_key: true |
 | category    | references | null: false, foreign_key: true |
-| brand_id    | references | null: false, foreign_key: true |
+| brand       | references | null: false, foreign_key: true |
 
 
 ### Association
 
 - has_many  :comments
 - has_many  :buys
+- has_many  :brands
 - belong_to :users
-
+- belong_to :categories
+- belong_to :origin_ships
 
 ## comments テーブル
 
@@ -126,3 +128,36 @@ Things you may want to cover:
 - belong_to :users
 - belong_to :item
 
+## brands テーブル
+
+| Column      | Type       | Options                        |
+| ----------- | ---------- | ------------------------------ |
+| item        | references | null: false, foreign_key: true |
+| name        | string     | null: false                    |
+
+### Association
+- belong_to :items
+
+## categories テーブル
+
+| Column      | Type       | Options                        |
+| ----------- | ---------- | ------------------------------ |
+| category_id | integer    | null: false                    |
+| title       | string     | null: false                    |
+| text        | text       | null: false                    |
+
+### Association
+
+- has_many  :items
+
+## origin_ships テーブル
+
+| Column      | Type       | Options                        |
+| ----------- | ---------- | ------------------------------ |
+| ship_id     | integer    | null: false                    |
+| title       | string     | null: false                    |
+| text        | text       | null: false                    |
+
+### Association
+
+- has_many  :items

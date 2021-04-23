@@ -63,7 +63,7 @@ Things you may want to cover:
 ### Association
 
 <!-- - has_many  :comments -->
-- has_one  :buy
+- has_one    :buy
 - belongs_to :user
 <!-- has_oneを使う時は親にbelongs_toを設置する -->
 
@@ -77,8 +77,8 @@ Things you may want to cover:
 ### Association
 
 - belongs_to :user
-- has_one :item
-- has_one :buyer
+- belongs_to :item
+- has_one    :buyer
 
 
 ## buyers テーブル

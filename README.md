@@ -41,7 +41,8 @@ Things you may want to cover:
 
 <!-- - has_many  :comments -->
 - has_many  :items
-- has_one  :buys
+- has_many  :buys
+<!-- has_many  :buys は複数商品を買うため -->
 
 
 ## items テーブル
@@ -62,8 +63,8 @@ Things you may want to cover:
 ### Association
 
 <!-- - has_many  :comments -->
-- has_one  :buys
-- has_many :users
+- has_one  :buy
+- belongs_to :users
 
 
 <!-- ## comments テーブル
@@ -88,13 +89,13 @@ Things you may want to cover:
 | address           | string     | null: false                    |
 | building_name     | string     |                                |
 | phone_number      | string     | null: false                    |
-| buys              | references | null: false, foreign_key: true |
+| buy               | references | null: false, foreign_key: true |
 
 
 ### Association
 
 - has_many :users
-- has_one  :buys
+- has_one  :buy
 
 
 ## buys テーブル
@@ -106,6 +107,6 @@ Things you may want to cover:
 
 ### Association
 
-- has_one :users
-- has_one :items
-- has_one :buyers
+- has_one :user
+- has_one :item
+- has_one :buyer

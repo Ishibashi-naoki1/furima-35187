@@ -26,17 +26,16 @@ Things you may want to cover:
 
 ## users テーブル
 
-| Column             | Type   | Options      |
-| ------------------ | ------ | ------------ |
-| nickname           | string | null: false  |
-| password           | string | null: false  |
-| encrypted_password | string | null: false  |
-| email              | string | unique: true |
-| first_name         | string | null: false  |
-| family_name        | string | null: false  |
-| first_name _kana   | string | null: false  |
-| family_name _kana  | string | null: false  |
-| birthday           | date   | null: false  |
+| Column             | Type   | Options                   |
+| ------------------ | ------ | ------------------------- |
+| encrypted_password | string | null: false, default: ""  |
+| email              | string | null: false, default: ""  |
+| nickname           | string | null: false               |
+| first_name         | string | null: false               |
+| family_name        | string | null: false               |
+| first_name _kana   | string | null: false               |
+| family_name _kana  | string | null: false               |
+| birthday           | date   | null: false               |
 
 ### Association
 
@@ -55,13 +54,11 @@ Things you may want to cover:
 | Seller      | integer    | null: false                    |
 | condition   | text       | null: false                    |
 | category_id | integer    | null: false                    |
+| brand_id    | integer    | null: false                    |
 | carriage    | integer    | null: false                    |
 | ship_id     | integer    | null: false                    |
 | ship_date   | integer    | null: false                    |
-| carriage    | integer    | null: false                    |
 | user        | references | null: false, foreign_key: true |
-| category    | references | null: false, foreign_key: true |
-| brand_id    | references | null: false, foreign_key: true |
 
 
 ### Association
@@ -107,16 +104,7 @@ Things you may want to cover:
 
 | Column            | Type       | Options                        |
 | ----------------- | ---------- | ------------------------------ |
-| first_name        | string     | null: false                    |
-| family_name       | string     | null: false                    |
-| first_name _kana  | string     | null: false                    |
-| family_name _kana | string     | null: false                    |
-| post_code         | string     | null: false                    |
-| prefecture        | string     | null: false                    |
-| city              | string     | null: false                    |
-| address           | string     | null: false                    |
-| building_name     | string     | null: false                    |
-| phone_number      | string     | null: false                    |
+| buy               | string     | null: false                    |
 | item              | references | null: false, foreign_key: true |
 | user              | references | null: false, foreign_key: true |
 

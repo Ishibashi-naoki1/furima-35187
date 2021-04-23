@@ -47,37 +47,39 @@ Things you may want to cover:
 
 ## items テーブル
 
-| Column       | Type       | Options                        |
-| ------------ | ---------- | ------------------------------ |
-| item_name    | string     | null: false                    |
-| price        | integer    | null: false                    |
-| condition    | text       | null: false                    |
-| category_id  | integer    | null: false                    |
-| brand_id     | integer    | null: false                    |
-| carriage_id  | integer    | null: false                    |
-| ship_id      | integer    | null: false                    |
-| ship_date_id | integer    | null: false                    |
-| user         | references | null: false, foreign_key: true |
+| Column        | Type       | Options                        |
+| ------------- | ---------- | ------------------------------ |
+| item_name     | string     | null: false                    |
+| price         | integer    | null: false                    |
+| condition     | text       | null: false                    |
+| category_id   | integer    | null: false                    |
+| brand_id      | integer    | null: false                    |
+| carriage_id   | integer    | null: false                    |
+| prefecture_id | integer    | null: false                    |
+| ship_date_id  | integer    | null: false                    |
+| user          | references | null: false, foreign_key: true |
 
 
 ### Association
 
 <!-- - has_many  :comments -->
 - has_one  :buy
-- belongs_to :users
+- belongs_to :user
+<!-- has_oneを使う時は親にbelongs_toを設置する -->
 
+## buys テーブル
 
-<!-- ## comments テーブル
-
-| Column    | Type       | Options                        |
-| --------- | ---------- | ------------------------------ |
-| comment   | string     | null: false                    |
-| user      | references | null: false, foreign_key: true |
-| items     | references | null: false, foreign_key: true |
+| Column            | Type       | Options                        |
+| ----------------- | ---------- | ------------------------------ |
+| item              | references | null: false, foreign_key: true |
+| user              | references | null: false, foreign_key: true |
 
 ### Association
-- belong_to :users
-- belong_to :items -->
+
+- belongs_to :user
+- has_one :item
+- has_one :buyer
+
 
 ## buyers テーブル
 
@@ -94,19 +96,16 @@ Things you may want to cover:
 
 ### Association
 
-- has_many :users
-- has_one  :buy
+- belongs_to  :buy
 
+<!-- ## comments テーブル
 
-## buys テーブル
-
-| Column            | Type       | Options                        |
-| ----------------- | ---------- | ------------------------------ |
-| item              | references | null: false, foreign_key: true |
-| user              | references | null: false, foreign_key: true |
+| Column    | Type       | Options                        |
+| --------- | ---------- | ------------------------------ |
+| comment   | string     | null: false                    |
+| user      | references | null: false, foreign_key: true |
+| items     | references | null: false, foreign_key: true |
 
 ### Association
-
-- has_one :user
-- has_one :item
-- has_one :buyer
+- belong_to :users
+- belong_to :items -->

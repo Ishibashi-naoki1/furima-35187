@@ -29,7 +29,7 @@ Things you may want to cover:
 | Column             | Type   | Options                   |
 | ------------------ | ------ | ------------------------- |
 | encrypted_password | string | null: false, default: ""  |
-| email              | string | null: false, default: ""  |
+| email              | string | null: false, unique: true |
 | nickname           | string | null: false               |
 | first_name         | string | null: false               |
 | family_name        | string | null: false               |
@@ -39,36 +39,34 @@ Things you may want to cover:
 
 ### Association
 
-- has_many  :comments
+<!-- - has_many  :comments -->
 - has_many  :items
-- belong_to :buyers
-- has_many  :buys
+- has_one  :buys
 
 
 ## items テーブル
 
-| Column      | Type       | Options                        |
-| ----------- | ---------- | ------------------------------ |
-| item_name   | string     | null: false                    |
-| price       | integer    | null: false                    |
-| Seller      | integer    | null: false                    |
-| condition   | text       | null: false                    |
-| category_id | integer    | null: false                    |
-| brand_id    | integer    | null: false                    |
-| carriage    | integer    | null: false                    |
-| ship_id     | integer    | null: false                    |
-| ship_date   | integer    | null: false                    |
-| user        | references | null: false, foreign_key: true |
+| Column       | Type       | Options                        |
+| ------------ | ---------- | ------------------------------ |
+| item_name    | string     | null: false                    |
+| price        | integer    | null: false                    |
+| condition    | text       | null: false                    |
+| category_id  | integer    | null: false                    |
+| brand_id     | integer    | null: false                    |
+| carriage_id  | integer    | null: false                    |
+| ship_id      | integer    | null: false                    |
+| ship_date_id | integer    | null: false                    |
+| user         | references | null: false, foreign_key: true |
 
 
 ### Association
 
-- has_many  :comments
-- has_many  :buys
-- belong_to :users
+<!-- - has_many  :comments -->
+- has_one  :buys
+- has_many :users
 
 
-## comments テーブル
+<!-- ## comments テーブル
 
 | Column    | Type       | Options                        |
 | --------- | ---------- | ------------------------------ |
@@ -78,38 +76,36 @@ Things you may want to cover:
 
 ### Association
 - belong_to :users
-- belong_to :items
+- belong_to :items -->
 
 ## buyers テーブル
 
 | Column            | Type       | Options                        |
 | ----------------- | ---------- | ------------------------------ |
-| first_name        | string     | null: false                    |
-| family_name       | string     | null: false                    |
-| first_name _kana  | string     | null: false                    |
-| family_name _kana | string     | null: false                    |
 | post_code         | string     | null: false                    |
-| prefecture        | string     | null: false                    |
+| prefecture_id     | integer    | null: false                    |
 | city              | string     | null: false                    |
 | address           | string     | null: false                    |
-| building_name     | string     | null: false                    |
+| building_name     | string     |                                |
 | phone_number      | string     | null: false                    |
-| user              | references | null: false, foreign_key: true |
+| buys              | references | null: false, foreign_key: true |
+
 
 ### Association
 
-- belong_to :users
+- has_many :users
+- has_one  :buys
+
 
 ## buys テーブル
 
 | Column            | Type       | Options                        |
 | ----------------- | ---------- | ------------------------------ |
-| buy               | string     | null: false                    |
 | item              | references | null: false, foreign_key: true |
 | user              | references | null: false, foreign_key: true |
 
 ### Association
 
-- belong_to :users
-- belong_to :item
-
+- has_one :users
+- has_one :items
+- has_one :buyers

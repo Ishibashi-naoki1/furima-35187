@@ -6,12 +6,11 @@ class User < ApplicationRecord
  
         with_options presence: true do
           validates :nickname, presence:{message: "has already been taken."}
-            with_options format:{with: /\A[一-龥ぁ-ん]/, message: "Full-width characters."} do
+            with_options format:{with: /\A[ぁ-んァ-ヶ一-龥々ー]/, message: "Full-width characters."} do
               validates :first_name
               validates :family_name
             end
             with_options format:{with: /(?=.*[a-zA-Z])(?=.*\d)[a-zA-Z\d]{6,}/, message: "Include both letters and numbers."} do
-              validates :encrypted_password
               validates :password
             end
             with_options format:{with: /\A[ァ-ヶー－]+\z/, message: "Full-width katakana characters."} do

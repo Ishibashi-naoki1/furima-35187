@@ -37,7 +37,7 @@ RSpec.describe User, type: :model do
         it "nicknameが空だと登録できない" do
           @user.nickname = ""
           @user.valid?
-          expect(@user.errors.full_messages).to include "Nickname has already been taken."
+          expect(@user.errors.full_messages).to include "Nickname can't be blank"
         end
         it "family_nameが空では登録できない" do
           @user.family_name = ""
@@ -45,7 +45,7 @@ RSpec.describe User, type: :model do
           expect(@user.errors.full_messages).to include "Family name can't be blank"
         end
         it "family_nameが全角以外では登録できない" do
-          @user.family_name = "[^ -~｡-ﾟ\t]+$"
+          @user.family_name = "^kana"
           @user.valid?
           expect(@user.errors.full_messages).to include "Family name Full-width characters."
         end
@@ -65,7 +65,7 @@ RSpec.describe User, type: :model do
           expect(@user.errors.full_messages).to include "Family name kana can't be blank"
         end
         it "family_name_kanaがカタカナ以外では登録できない" do
-          @user.family_name_kana = "^ァ-ヶ"
+          @user.family_name_kana = "^カナ"
           @user.valid?
           expect(@user.errors.full_messages).to include "Family name kana Full-width katakana characters."
         end
@@ -75,7 +75,7 @@ RSpec.describe User, type: :model do
           expect(@user.errors.full_messages).to include "First name kana can't be blank"
         end
         it "first_name_kanaがカタカナ以外では登録できない" do
-          @user.first_name_kana = "^ァ-ヶ"
+          @user.first_name_kana = "^カナ"
           @user.valid?
           expect(@user.errors.full_messages).to include "First name kana Full-width katakana characters."
         end
@@ -102,7 +102,7 @@ RSpec.describe User, type: :model do
           expect(@user.errors.full_messages).to include("Password can't be blank")
         end
         it "passwordが英語のみでは登録できない" do
-          @user.password = "^[a-zA-Z]*$"
+          @user.password = "aaaAAA"
           @user.valid?
           expect(@user.errors.full_messages).to include("Password Include both letters and numbers.")
         end
@@ -113,7 +113,7 @@ RSpec.describe User, type: :model do
           expect(@user.errors.full_messages).to include("Password is too short (minimum is 6 characters)")
         end
         it "passwordは英数字混合でないと登録できない" do
-          @user.password = "^[0-9a-zA-Z]*$"
+          @user.password = "^[00aaAA]"
           @user.valid?
           expect(@user.errors.full_messages).to include("Password confirmation doesn't match Password")
         end

@@ -5,12 +5,12 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :validatable
  
         with_options presence: true do
-          validates :nickname, presence:{message: "has already been taken."}
-            with_options format:{with: /\A[ぁ-んァ-ヶ一-龥々ー]/, message: "Full-width characters."} do
+          validates :nickname, presence:{message: "can't be blank"}
+            with_options format:{with: /\A[ぁ-んァ-ン一-龥々ー]+\z/, message: "Full-width characters."} do
               validates :first_name
               validates :family_name
             end
-            with_options format:{with: /(?=.*[a-zA-Z])(?=.*\d)[a-zA-Z\d]{6,}/, message: "Include both letters and numbers."} do
+            with_options format:{with: /\A(?=.*?[a-z])(?=.*?\d)[a-z\d]+\z/i, message: "Include both letters and numbers."} do
               validates :password
             end
             with_options format:{with: /\A[ァ-ヶー－]+\z/, message: "Full-width katakana characters."} do

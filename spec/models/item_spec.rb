@@ -11,7 +11,7 @@ RSpec.describe Item, type: :model do
       end
     end
     context '商品情報の入力がうまく行かない時' do
-      it 'imageが存在すれば登録できること' do
+      it 'imageが空だと出品できない' do
         @item.image = nil
         @item.valid?
         expect(@item.errors.full_messages).to include("Image can't be blank")
@@ -101,7 +101,7 @@ RSpec.describe Item, type: :model do
         @item.valid?
         expect(@item.errors.full_messages).to include("Price Half-width number")
       end
-      it 'nameが41文字異常であれば登録できない' do
+      it 'nameが41文字以上であれば登録できない' do
         @item.item_name = "a"*41
         @item.valid?
         expect(@item.errors.full_messages).to include("Item name is too long (maximum is 40 characters)")

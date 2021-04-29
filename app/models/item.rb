@@ -16,6 +16,7 @@ class Item < ApplicationRecord
    validates :item_name, length: { maximum: 40 }
    validates :condition, length: { maximum: 1000 }
    validates :image
+   validates :price
   end
   
   with_options presence: true, numericality: { other_than: 1, message: 'cna’t be blank'} do

@@ -15,8 +15,9 @@ class Item < ApplicationRecord
   with_options presence: true do
    validates :item_name, length: { maximum: 40 }
    validates :condition, length: { maximum: 1000 }
+   validates :image
   end
-
+  
   with_options presence: true, numericality: { other_than: 1, message: 'cna’t be blank'} do
     validates :category_id
     validates :prefecture_id

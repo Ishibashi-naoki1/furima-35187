@@ -22,7 +22,6 @@ class ItemsController < ApplicationController
 
   def show
     @item = Item.find(params[:id])
-    # @item = User.find(params[:id])
   end
 
   # def edit

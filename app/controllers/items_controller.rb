@@ -1,6 +1,6 @@
 class ItemsController < ApplicationController
   before_action :authenticate_user!, only: [:new, :create]
-  before_action :set_item, except: [:index, :new, :create]
+  before_action :set_item, except: [:index, :new, :create,:show]
   def index
      @items = Item.all.order("created_at DESC")
   end
@@ -14,15 +14,16 @@ class ItemsController < ApplicationController
     @item = Item.new(items_params)
     if @item.valid?
      @item.save
-     redirect_to root_path(@item)
+     redirect_to root_path
     else
       render :new
     end
   end
 
-  # def s$how
-  #   @item = Item.find(params[:id])
-  # end
+  def show
+    @item = Item.find(params[:id])
+    # @item = User.find(params[:id])
+  end
 
   # def edit
   #   @item = Item.find(params[:id])

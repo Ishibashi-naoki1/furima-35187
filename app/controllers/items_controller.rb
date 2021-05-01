@@ -1,7 +1,7 @@
 class ItemsController < ApplicationController
-  before_action :authenticate_user!, only: [:new, :create, :edit, :update, :delete]
+  before_action :authenticate_user!, only: [:new, :create, :edit, :update, :destroy]
   before_action :set_item, except: [:index, :new, :create]
-  before_action :contributor_confirmation, only: [:edit, :update, :delete]
+  before_action :contributor_confirmation, only: [:edit, :update, :destroy]
   
   def index
      @items = Item.all.order("created_at DESC")
@@ -37,6 +37,8 @@ class ItemsController < ApplicationController
   def destroy
     if @item.destroy
       redirect_to root_path
+    else
+      render :index
     end
   end
 

@@ -12,7 +12,6 @@ class ItemsController < ApplicationController
 
   def create
     @item = Item.new(items_params)
-
     if  @item.save
        redirect_to root_path
     else
@@ -20,9 +19,8 @@ class ItemsController < ApplicationController
     end
   end
 
-  # def s$how
-  #   @item = Item.find(params[:id])
-  # end
+  def show
+  end
 
   # def edit
   #   @item = Item.find(params[:id])

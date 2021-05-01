@@ -25,14 +25,9 @@ class ItemsController < ApplicationController
   end
 
   def edit
-    @item = Item.find(params[:id])
-    unless user_signed_in?
-      redirect_to toot_path
-    end
   end
 
   def update
-    @item = Item.find(params[:id])
     if @item.update(items_params)
       redirect_to root_path
     else

@@ -5,6 +5,6 @@ Rails.application.routes.draw do
   
   resources :items, only: [:index, :create, :new, :show]
   
-  # , :edit, :destroy
+  # , :edit, :destroy, :edit, :update
 end
 

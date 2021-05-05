@@ -14,7 +14,7 @@ RSpec.describe OrderBuyer, type: :model do
       it 'すべての値が正しく入力されていれば保存できること' do
         expect(@order_buyer).to be_valid
       end
-      it "priceとtokenがあれば保存ができること" do
+      it "tokenがあれば保存ができること" do
         expect(@order_buyer).to be_valid
       end
     end

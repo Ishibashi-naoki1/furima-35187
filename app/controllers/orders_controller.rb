@@ -1,5 +1,6 @@
 class OrdersController < ApplicationController
   before_action :authenticate_user!, only: [:index, :new, :create]
+  before_action :contributor_confirmation, only: [:create]
 
   def index
     @item = Item.find(params[:item_id])
@@ -32,5 +33,9 @@ class OrdersController < ApplicationController
       card: order_buyer_params[:token],
       currency: 'jpy'
     )
+  end
+
+  def contributor_confirmation  
+    redirect_to root_path unless current_user == @item.user
   end
 end

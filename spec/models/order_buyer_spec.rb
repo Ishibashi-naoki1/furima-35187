@@ -14,8 +14,10 @@ RSpec.describe OrderBuyer, type: :model do
       it 'すべての値が正しく入力されていれば保存できること' do
         expect(@order_buyer).to be_valid
       end
+      it "priceとtokenがあれば保存ができること" do
+        expect(@order_buyer).to be_valid
+      end
     end
-
     context '内容に問題がある場合' do
       it 'post_codeが空では保存できないこと' do
         @order_buyer.post_code = ''
@@ -52,6 +54,12 @@ RSpec.describe OrderBuyer, type: :model do
         @order_buyer.valid?
         expect(@order_buyer.errors.full_messages).to include("User can't be blank")
       end
+      it "tokenが空では登録できないこと" do
+        @order_buyer.token = nil
+        @order_buyer.valid?
+        expect(@order_buyer.errors.full_messages).to include("Token can't be blank")
+      end
+      
     end
   end
 end

@@ -1,5 +1,5 @@
 const pay = () => {
-  Payjp.setPublicKey("pk_test_c31241a2b7555b057dc2e221");
+  Payjp.setPublicKey(process.env.PAYJP_PUBLIC_KEY);
   const form = document.getElementById("charge-form");
   form.addEventListener("submit", (e) => {
     e.preventDefault();
@@ -14,7 +14,8 @@ const pay = () => {
       exp_month: formData.get("order_buyer[exp_month]"),
       exp_year: `20${formData.get("order_buyer[exp_year]")}`,
     };
-    // console.log(card)
+      // console.log(status)
+
      
     Payjp.createToken(card, (status, response) => {
       if (status == 200) {
@@ -24,10 +25,16 @@ const pay = () => {
         renderDom.insertAdjacentHTML("beforeend", tokenObj);
       }
 
-      document.getElementById("order_buyer_number").removeAttribute("name");
-      document.getElementById("order_buyer_cvc").removeAttribute("name");
-      document.getElementById("order_buyer_exp_month").removeAttribute("name");
-      document.getElementById("order_buyer_exp_year").removeAttribute("name");
+      // VALID_CARD_NUMBER_REGEX = /^\d{14,16}$/                                                                                                                                                                
+      // VALID_YAER_REGEX = /^\d{2}$/                                                                                                                                                                           
+      // VALID_MONTH_REGEX = /^\d{2}$/                                                                                                                                                                          
+      // VALID_CVC_REGEX = /^\d{3,4}$/ 
+      
+
+      document.getElementById("card-number").removeAttribute("name");
+      document.getElementById("card-cvc").removeAttribute("name");
+      document.getElementById("card-exp-month").removeAttribute("name");
+      document.getElementById("card-exp-year").removeAttribute("name");
 
       document.getElementById("charge-form").submit();
     });

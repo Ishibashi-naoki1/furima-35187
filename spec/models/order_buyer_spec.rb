@@ -20,6 +20,10 @@ RSpec.describe OrderBuyer, type: :model do
       it "tokenがあれば保存ができること" do
         expect(@order_buyer).to be_valid
       end
+      it 'building_nameは空でも保存できること' do
+        @order_buyer.building_name = ''
+        expect(@order_buyer).to be_valid
+      end
     end
     context '内容に問題がある場合' do
       it 'post_codeが空では保存できないこと' do
@@ -32,12 +36,16 @@ RSpec.describe OrderBuyer, type: :model do
         @order_buyer.valid?
         expect(@order_buyer.errors.full_messages).to include('Post code is invalid. Include hyphen(-)')
       end
+      it 'prefecture_idを選択していないと保存できないこと' do
+        @order_buyer.prefecture_id = 1
+        @order_buyer.valid?
+        expect(@order_buyer.errors.full_messages).to include("Prefecture Select")
+      end
       it 'cityは空では保存できないこと' do
         @order_buyer.city = ""
         @order_buyer.valid?
         expect(@order_buyer.errors.full_messages).to include("City can't be blank")
       end
-      
       it 'addressは空では保存できないこと' do
         @order_buyer.address = ''
         @order_buyer.valid?

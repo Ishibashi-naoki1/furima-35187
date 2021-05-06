@@ -1,10 +1,8 @@
 class OrdersController < ApplicationController
   before_action :authenticate_user!, only: [:index, :new, :create]
   before_action :set_item, only: [:index, :create]
-  # before_action :contributor_confirmation, only: [:create]
 
   def index
-    # @itemから取り出されるパラムスはターミナルのroutesのorder#indexのURIの:item_idから引っ張っている
     if current_user == @item.user || @item.order.present?
     redirect_to root_path
     end
@@ -41,8 +39,4 @@ class OrdersController < ApplicationController
   def set_item
     @item = Item.find(params[:item_id])
   end
-
-  # def contributor_confirmation  
-  #   redirect_to root_path unless current_user == @item.order.nil
-  # end
 end

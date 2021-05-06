@@ -2,7 +2,10 @@ require 'rails_helper'
 
 RSpec.describe OrderBuyer, type: :model do
   before do
-    @order_buyer = FactoryBot.build(:order_buyer)
+    @user = FactoryBot.create(:user)
+    @item = FactoryBot.create(:item)
+    @order_buyer = FactoryBot.build(:order_buyer, user_id: @user.id, item_id: @item.id)
+    sleep(1)
   end
   describe '購入内容確認' do
     context '商品購入がうまくいく時' do
@@ -34,6 +37,7 @@ RSpec.describe OrderBuyer, type: :model do
         @order_buyer.valid?
         expect(@order_buyer.errors.full_messages).to include("City can't be blank")
       end
+      
       it 'addressは空では保存できないこと' do
         @order_buyer.address = ''
         @order_buyer.valid?
@@ -49,10 +53,15 @@ RSpec.describe OrderBuyer, type: :model do
         @order_buyer.valid?
         expect(@order_buyer.errors.full_messages).to include("Phone number can't be blank")
       end
-      it 'userが紐付いていないと保存できないこと' do
+      it 'user_idが紐付いていないと保存できないこと' do
         @order_buyer.user_id = nil
         @order_buyer.valid?
         expect(@order_buyer.errors.full_messages).to include("User can't be blank")
+      end
+      it 'item_idが紐付いていないと保存できないこと' do
+        @order_buyer.item_id = nil
+        @order_buyer.valid?
+        expect(@order_buyer.errors.full_messages).to include("Item can't be blank")
       end
       it "tokenが空では登録できないこと" do
         @order_buyer.token = nil

@@ -1,10 +1,11 @@
 class OrdersController < ApplicationController
   before_action :authenticate_user!, only: [:index, :new, :create]
+  before_action :set_item, only: [:index, :create]
   # before_action :contributor_confirmation, only: [:create]
 
   def index
-    @item = Item.find(params[:item_id])
-    if current_user == @item.user || @item.user.present?
+    # @itemから取り出されるパラムスはターミナルのroutesのorder#indexのURIの:item_idから引っ張っている
+    if current_user == @item.user || @item.order.present?
     redirect_to root_path
     end
     @order_buyer = OrderBuyer.new
@@ -14,9 +15,8 @@ class OrdersController < ApplicationController
   end
 
   def create
-    @item = Item.find(params[:item_id])
     @order_buyer = OrderBuyer.new(order_buyer_params)
-    if @order_buyer.valid? #&& 
+    if @order_buyer.valid? 
            pay_item
            @order_buyer.save
            return redirect_to root_path
@@ -36,6 +36,10 @@ class OrdersController < ApplicationController
       card: order_buyer_params[:token],
       currency: 'jpy'
     )
+  end
+
+  def set_item
+    @item = Item.find(params[:item_id])
   end
 
   # def contributor_confirmation  

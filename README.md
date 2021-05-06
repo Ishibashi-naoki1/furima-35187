@@ -41,7 +41,7 @@ Things you may want to cover:
 
 <!-- - has_many  :comments -->
 - has_many  :items
-- has_many  :buys
+- has_many  :orders
 <!-- has_many  :buys は複数商品を買うため -->
 
 
@@ -63,11 +63,11 @@ Things you may want to cover:
 ### Association
 
 <!-- - has_many  :comments -->
-- has_one    :buy
+- has_one    :order
 - belongs_to :user
 <!-- has_oneを使う時は親にbelongs_toを設置する -->
 
-## buys テーブル
+## orders テーブル
 
 | Column            | Type       | Options                        |
 | ----------------- | ---------- | ------------------------------ |
@@ -91,12 +91,12 @@ Things you may want to cover:
 | address           | string     | null: false                    |
 | building_name     | string     |                                |
 | phone_number      | string     | null: false                    |
-| buy               | references | null: false, foreign_key: true |
+| order             | references | null: false, foreign_key: true |
 
 
 ### Association
 
-- belongs_to  :buy
+- belongs_to  :order
 
 <!-- ## comments テーブル
 

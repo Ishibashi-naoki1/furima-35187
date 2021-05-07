@@ -19,7 +19,7 @@ class User < ApplicationRecord
               validates :family_name_kana
               validates :first_name_kana
             end
-            with_options format: {with: /\A\d{4}-\d{2}-\d{2}\z/, message: "Birthday can't be blank"} do
+            with_options format: {with: /\A\d{4}-\d{2}-\d{2}\z/, message: "can't be blank"} do
               validates :birthday
             end
         end

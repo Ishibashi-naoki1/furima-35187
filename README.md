@@ -39,7 +39,7 @@ Things you may want to cover:
 
 ### Association
 
-<!-- - has_many  :comments -->
+- has_many  :comments
 - has_many  :items
 - has_many  :orders
 <!-- has_many  :buys は複数商品を買うため -->
@@ -62,7 +62,7 @@ Things you may want to cover:
 
 ### Association
 
-<!-- - has_many  :comments -->
+- has_many  :comments
 - has_one    :order
 - belongs_to :user
 <!-- has_oneを使う時は親にbelongs_toを設置する -->
@@ -98,14 +98,14 @@ Things you may want to cover:
 
 - belongs_to  :order
 
-<!-- ## comments テーブル
+## comments テーブル
 
 | Column    | Type       | Options                        |
 | --------- | ---------- | ------------------------------ |
-| comment   | string     | null: false                    |
+| comment   | text       |                                |
 | user      | references | null: false, foreign_key: true |
-| items     | references | null: false, foreign_key: true |
+| item      | references | null: false, foreign_key: true |
 
 ### Association
 - belong_to :users
-- belong_to :items -->
+- belong_to :items

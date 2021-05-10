@@ -2,7 +2,6 @@ class ItemsController < ApplicationController
   before_action :authenticate_user!, only: [:new, :create, :edit, :update, :destroy]
   before_action :set_item, except: [:index,:new, :create]
   before_action :contributor_confirmation, only: [:edit, :update, :destroy]
-  
   def index
      @items = Item.all.order("created_at DESC")
   end
@@ -21,6 +20,8 @@ class ItemsController < ApplicationController
   end
 
   def show
+  @messages = Message.all
+   @message = Message.new
   end
 
   def edit

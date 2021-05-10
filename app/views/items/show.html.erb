@@ -9,9 +9,9 @@
     <div class="item-img-content">
       <%= image_tag @item.image ,class:"item-box-img" %>
       <% if @item.order.present?%>
-      <div class="sold-out">
-        <span>Sold Out!!</span>
-      </div>
+        <div class="sold-out">
+          <span>Sold Out!!</span>
+        </div>
       <% end %>
     </div>
     <div class="item-price-box">
@@ -77,20 +77,29 @@
     </div>
   </div>
   <%# /商品の概要 %>
-
+  
   <div class="comment-box">
-    <form>
-      <textarea class="comment-text"></textarea>
-      <p class="comment-warn">
-        相手のことを考え丁寧なコメントを心がけましょう。
-        <br>
-        不快な言葉遣いなどは利用制限や退会処分となることがあります。
-      </p>
-      <button type="submit" class="comment-btn">
-        <%= image_tag "comment.png" ,class:"comment-flag-icon" ,width:"20",height:"25"%>
-        <span>コメントする<span>
-      </button>
-    </form>
+    <% if user_signed_in? && @item.order.nil?%>
+        <%= form_with(model: @message,url: item_messages_path(@item.id), local: true) do |f| %>
+          <%= f.text_area :text, placeholder: "コメントする", rows: "2", class:"comment-text" %>
+            <div id='messages'>
+              <% @messages.reverse_each do |message| %>
+              <% if @item.id = message.item_id %>
+               <p><%="＠"%><%= current_user.nickname %><%="さん"%></p>
+               <p><%= message.created_at.strftime('%Y/%m/%d/%-H') %><%="時"%></p>
+                <p><%= message.text %></p>
+              <% end %>
+              <% end %>
+            </div>
+          <p class="comment-warn">
+            相手のことを考え丁寧なコメントを心がけましょう。
+            <br>
+            不快な言葉遣いなどは利用制限や退会処分となることがあります。
+          </p>
+          <%= f.submit "コメントする", class:"comment-btn" %>
+          <%= image_tag "comment.png" ,class:"comment-flag-icon" ,width:"20",height:"25"%>
+        <% end %>
+    <% end %>
   </div>
   <div class="links">
     <a href="#" class="change-item-btn">

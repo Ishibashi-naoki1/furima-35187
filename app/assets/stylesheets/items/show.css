@@ -179,7 +179,11 @@
   display: flex;
   justify-content: center;
 }
-
+#messages {
+  padding: 10px;
+  text-align: left;
+  border: solid 2px #dedede;
+}
 .comment-flag-icon {
   margin: 10px 5px 0 0;
 }

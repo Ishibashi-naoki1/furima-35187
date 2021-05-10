@@ -84,10 +84,12 @@
           <%= f.text_area :text, placeholder: "コメントする", rows: "2", class:"comment-text" %>
             <div id='messages'>
               <% @messages.reverse_each do |message| %>
-              <% if @item.id = message.item_id %>
-               <p><%="＠"%><%= current_user.nickname %><%="さん"%></p>
-               <p><%= message.created_at.strftime('%Y/%m/%d/%-H') %><%="時"%></p>
+              <% if @item.id == message.item_id %>
+               <p><%="＠"%><%= message.user.nickname %><%="さん"%></p>
+               <p><%="投稿日時："%><%= message.created_at.strftime('%Y/%m/%d/%-H') %><%="時"%></p>
+                <br>
                 <p><%= message.text %></p>
+                <br>
               <% end %>
               <% end %>
             </div>

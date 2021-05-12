@@ -54,7 +54,8 @@ Chromeの最新版を利用してアクセスしてください。
 １）ユーザー管理ページからトップページ（商品一覧表示  
 ![demo](https://gyazo.com/2c05debb7e06ec904add61b43fe9aa4b.raw)  
 ２）新規商品投稿ページから
-![demo](https://gyazo.com/8a289b4aa8e855c80dc2fd79c3a24f93.raw) | ![demo](https://gyazo.com/57d45bf816959adf77b4c0417230fbde.raw)
+![demo](https://gyazo.com/8a289b4aa8e855c80dc2fd79c3a24f93.raw)  
+![demo](https://gyazo.com/57d45bf816959adf77b4c0417230fbde.raw)  
 ３）商品詳細ページ  
 
 サーバーサイド  

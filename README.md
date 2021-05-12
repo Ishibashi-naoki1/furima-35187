@@ -52,7 +52,7 @@ Chromeの最新版を利用してアクセスしてください。
 デプロイ、本番環境関連
 
 １）ユーザー管理ページ  
-![demo](https://gyazo.com/2c05debb7e06ec904add61b43fe9aa4b)  
+![demo]https://gyazo.com/2c05debb7e06ec904add61b43fe9aa4b  
 ２）トップページ（商品一覧表示  
 ３）商品詳細ページ  
 

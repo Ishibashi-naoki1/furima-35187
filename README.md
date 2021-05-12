@@ -58,7 +58,7 @@ Chromeの最新版を利用してアクセスしてください。
 ３）商品編集ページ  
 ![demo](https://gyazo.com/57d45bf816959adf77b4c0417230fbde.raw)  
 ４）商品詳細ページ  
-![demo](https://gyazo.com/59290984e0ffca9ff146c292896ca6d9.raw)  
+![demo](https://gyazo.com/3372ccc3603ef37bb68656b17952a699.raw)  
 5）商品購入ページ  
 ![demo](https://gyazo.com/f31fc0a0d689c45946412b69ffb08df6.raw)  
 

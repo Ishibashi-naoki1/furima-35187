@@ -177,7 +177,7 @@ Pay.jpのAPIを利用しカード決済機能を実装
 間違っていれば、次の仮説が立ちますし結果的に無駄に関わるモノが劇的に減ることを学びました。
 
 #　ER図
-<img src="/furima.dio" width="50">
+<img src="https://gyazo.com/c00d68d67b7085dc277e3f4b66044dc4" width="50">
 
 # テーブル設計
 

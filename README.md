@@ -53,13 +53,13 @@ Chromeの最新版を利用してアクセスしてください。
 
 １）ユーザー管理ページからトップページ（商品一覧表示  
 ![demo](https://gyazo.com/2c05debb7e06ec904add61b43fe9aa4b.raw)  
-２）新規商品投稿ページ
+２）新規商品投稿ページ  
 ![demo](https://gyazo.com/8a289b4aa8e855c80dc2fd79c3a24f93.raw)  
-３）商品編集ページ 
+３）商品編集ページ  
 ![demo](https://gyazo.com/57d45bf816959adf77b4c0417230fbde.raw)  
-４）商品詳細ページ
+４）商品詳細ページ  
 ![demo](https://gyazo.com/59290984e0ffca9ff146c292896ca6d9.raw)  
-5）商品購入ページ
+5）商品購入ページ  
 ![demo](https://gyazo.com/f31fc0a0d689c45946412b69ffb08df6.raw)  
 
 

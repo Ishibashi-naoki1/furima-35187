@@ -52,7 +52,7 @@ Chromeの最新版を利用してアクセスしてください。
 デプロイ、本番環境関連
 
 １）ユーザー管理ページ  
-<img width="88" alt="スクリーンショット 2021-04-29 15 30 42" src="https://gyazo.com/2c05debb7e06ec904add61b43fe9aa4b/81144617/117949369-04d73b00-b34d-11eb-99fd-bf05036ad1c0.png">
+![demo](https://gyazo.com/2c05debb7e06ec904add61b43fe9aa4b)  
 ２）トップページ（商品一覧表示  
 ３）商品詳細ページ  
 

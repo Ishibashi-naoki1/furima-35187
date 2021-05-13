@@ -52,7 +52,8 @@ Chromeの最新版を利用してアクセスしてください。
 デプロイ、本番環境関連
 
 １）ユーザー管理ページからトップページ（商品一覧表示  
-![demo](https://gyazo.com/2c05debb7e06ec904add61b43fe9aa4b.raw)  
+![screencapture-furima-35187-herokuapp-2021-05-13-15_44_17](https://user-images.githubusercontent.com/81144617/118088596-42e26680-b402-11eb-8bd9-18e5e75fb6b4.png) ![screencapture-furima-35187-herokuapp-users-sign-up-2021-05-13-15_47_37](https://user-images.githubusercontent.com/81144617/118088989-d7e55f80-b402-11eb-9973-9fd6734c3233.png)
+  
 ２）新規商品投稿ページ  
 ![demo](https://gyazo.com/8a289b4aa8e855c80dc2fd79c3a24f93.raw)  
 ３）商品編集ページ  

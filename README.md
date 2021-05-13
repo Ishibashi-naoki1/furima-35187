@@ -54,21 +54,20 @@ Chromeの最新版を利用してアクセスしてください。
 #### １） トップページ（商品一覧表示  
 <img src="https://user-images.githubusercontent.com/81144617/118088596-42e26680-b402-11eb-8bd9-18e5e75fb6b4.png" width="80%">  
   
-#### 2) ユーザー管理ページ ------------------------ 3)新規商品投稿ページ  
+#### 2) ユーザー管理ページ ------------------------------ 3)新規商品投稿ページ  
 
 <img src="https://user-images.githubusercontent.com/81144617/118088989-d7e55f80-b402-11eb-9973-9fd6734c3233.png" width="45%">' '<img src="https://user-images.githubusercontent.com/81144617/118091903-5d1e4380-b406-11eb-86a4-1ea7c6cd4ebb.png" width="45%">
   
 
-２）新規商品投稿ページ  
-![demo](https://gyazo.com/8a289b4aa8e855c80dc2fd79c3a24f93.raw)  
-３）商品編集ページ  
-![demo](https://gyazo.com/57d45bf816959adf77b4c0417230fbde.raw)  
-４）商品詳細ページ  
-![demo](https://gyazo.com/3372ccc3603ef37bb68656b17952a699.raw)  
-5）商品購入ページ  
-![demo](https://gyazo.com/f31fc0a0d689c45946412b69ffb08df6.raw)  
-
-
+#### 4）商品編集ページ  
+  
+<img src="https://user-images.githubusercontent.com/81144617/118096794-cacd6e00-b40c-11eb-8b53-35e2f0cde9c7.png" width="45%">' '<img src="https://user-images.githubusercontent.com/81144617/118096883-e89ad300-b40c-11eb-9a20-31275669eee2.png" width="45%">
+  
+#### 5）商品購入ページ  
+  
+<img src="https://user-images.githubusercontent.com/81144617/118097640-eab16180-b40d-11eb-9059-9bda9ac34005.png" width="45%">' '<img src="https://user-images.githubusercontent.com/81144617/118097779-13d1f200-b40e-11eb-8d96-19a756981177.png" width="45%">
+  
+  
 サーバーサイド  
 １)会員登録機能  
 会員登録とログインを行うことができます。  

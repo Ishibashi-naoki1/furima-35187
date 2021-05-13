@@ -55,6 +55,7 @@ Chromeの最新版を利用してアクセスしてください。
 <img src="https://user-images.githubusercontent.com/81144617/118088596-42e26680-b402-11eb-8bd9-18e5e75fb6b4.png" width="120px">
 <img src="https://user-images.githubusercontent.com/81144617/118088989-d7e55f80-b402-11eb-9973-9fd6734c3233.png" width="120px">
   
+-|-
 ２）新規商品投稿ページ  
 ![demo](https://gyazo.com/8a289b4aa8e855c80dc2fd79c3a24f93.raw)  
 ３）商品編集ページ  

@@ -53,9 +53,9 @@ Chromeの最新版を利用してアクセスしてください。
 
 １） トップページ（商品一覧表示  
 <img src="https://user-images.githubusercontent.com/81144617/118088596-42e26680-b402-11eb-8bd9-18e5e75fb6b4.png" width="80%">  
-2) ユーザー管理ページ ---------------- 3)新規商品投稿ページ  
+2) ユーザー管理ページ --------------------------- 3)新規商品投稿ページ  
 
-<img src="https://user-images.githubusercontent.com/81144617/118088989-d7e55f80-b402-11eb-9973-9fd6734c3233.png" width="49%"><img src="https://user-images.githubusercontent.com/81144617/118091903-5d1e4380-b406-11eb-86a4-1ea7c6cd4ebb.png" width="49%">
+<img src="https://user-images.githubusercontent.com/81144617/118088989-d7e55f80-b402-11eb-9973-9fd6734c3233.png" width="45%"><img src="https://user-images.githubusercontent.com/81144617/118091903-5d1e4380-b406-11eb-86a4-1ea7c6cd4ebb.png" width="45%">
   
 
 ２）新規商品投稿ページ  

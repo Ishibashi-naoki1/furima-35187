@@ -61,7 +61,7 @@ Chromeの最新版を利用してアクセスしてください。
 
 #### 4）商品編集ページ  
   
-<img src="https://user-images.githubusercontent.com/81144617/118096794-cacd6e00-b40c-11eb-8b53-35e2f0cde9c7.png" width="30%">' '<img src="https://user-images.githubusercontent.com/81144617/118096883-e89ad300-b40c-11eb-9a20-31275669eee2.png" width="45%">
+<img src="https://user-images.githubusercontent.com/81144617/118096794-cacd6e00-b40c-11eb-8b53-35e2f0cde9c7.png" width="28%">' '<img src="https://user-images.githubusercontent.com/81144617/118096883-e89ad300-b40c-11eb-9a20-31275669eee2.png" width="45%">
   
 #### 5）商品購入ページ  
   

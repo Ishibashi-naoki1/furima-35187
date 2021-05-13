@@ -52,7 +52,7 @@ Chromeの最新版を利用してアクセスしてください。
 デプロイ、本番環境関連
 
 １）ユーザー管理ページからトップページ（商品一覧表示  
-<img src="https://user-images.githubusercontent.com/81144617/118088596-42e26680-b402-11eb-8bd9-18e5e75fb6b4.png" width="120px">
+<img src="https://user-images.githubusercontent.com/81144617/118088596-42e26680-b402-11eb-8bd9-18e5e75fb6b4.png" width="180px">
 <img src="https://user-images.githubusercontent.com/81144617/118088989-d7e55f80-b402-11eb-9973-9fd6734c3233.png" width="250px">
   
 -|-

@@ -257,7 +257,8 @@ Pay.jpのAPIを利用しカード決済機能を実装
 
 # ER図
 
-![furima](https://user-images.githubusercontent.com/81144617/117915253-e1e26200-b31f-11eb-9832-c8d3a8cd82a1.png)
+![furima](https://user-images.githubusercontent.com/81144617/118382790-c2a34780-b633-11eb-916a-5d83e690baf7.png)
+
 
 # テーブル設計
 

@@ -6,7 +6,7 @@
 
 # 開発状況
 
-  開 発 環 境   ：Ruby/Ruby on Rails/MySQL/Github/AWS/Visual Studio Code/html&Scss  
+  開 発 環 境   ：Ruby/Ruby on Rails/MySQL/JavaScript/HTML/CSS/Github/AWS/Visual Studio Code/  
   開 発 期 間   ：約3.5週間  
   平均作業時間   ：約 10時間  
   開 発 体 制   ：開発１人、レビュアー多数、アジャイル型開発（スクラム）、Trelloによるタスク管理
